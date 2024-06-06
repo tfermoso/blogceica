@@ -9,10 +9,10 @@ class Post extends Model
     protected $table = 'posts';
 
     protected $fillable = [
-        'title', 
-        'body', 
-        'imagen', 
-        'create_date', 
+        'tittle',
+        'body',
+        'image',
+        'create_date',
         'user_id'
     ];
 
@@ -22,5 +22,16 @@ class Post extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+    // Relación con el modelo Category
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class, 'post_category', 'post_id', 'category_id');
+    }
+
+    // Relación con el modelo Comment
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
     }
 }
