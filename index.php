@@ -2,6 +2,7 @@
 require 'vendor/autoload.php';
 require 'config.php';
 
+use App\Models\User;
 
 $user = new User;
 $user->name = 'John Doe';
