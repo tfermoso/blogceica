@@ -1,0 +1,20 @@
+{
+    "name": "tomas/blogceica",
+    "description": "Blog",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Tomas\\Blogceica\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "tfermoso",
+            "email": "tomas.fermoso@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^11.10",
+        "illuminate/events": "^11.10"
+    }
+}
